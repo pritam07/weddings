@@ -1,0 +1,11 @@
+@media only screen and (min-width: 993px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+        height: auto;
+    }
+}
