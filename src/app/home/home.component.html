@@ -1,0 +1,259 @@
+<!-- <p>
+  home works!
+</p> 
+<nav>
+  <a routerLink="/login">Login</a>  
+  <a routerLink="/dashboard">Dashboard</a>  
+</nav> -->
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top home-nav" id="mainNav">
+  <div class="home_login_container">
+    <div class="home-logo">
+    <a class="navbar-brand js-scroll-trigger" href="javascript:void(0);">LOGO</a>
+    </div>
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+   
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value, loginForm.valid)" novalidate class="home-login-box"> 
+      <div class="row home_login_row">  
+      <mz-input-container class="col s12 m6 l5 xl5">
+        <input mz-input mz-validation required
+          id="input-firstname"
+          formControlName="email"
+          type="text"
+          [errorMessageResource]="errorMessageResources.general"
+          [label]="'First Name'" />
+      </mz-input-container>
+      <mz-input-container class="col s12 m6 l5 xl5">
+        <input mz-input mz-validation required
+          id="input-password"
+          formControlName="password"
+          type="password"
+          [errorMessageResource]="errorMessageResources.general"
+          [label]="'Password'" />
+      </mz-input-container>
+            <button class="col s12 m6 l2 xl2" md-raised-button color="warn">Login</button>
+          </div> 
+    
+  </form> 
+  </div>
+</nav>
+
+<header class="bg-primary text-white">
+  <div class="text-center home-bg">
+   <div class="container">
+     <div class="home-form-container">
+       <div class="home-register-box">
+        <form *ngIf="masterDataList" class="f_left_full_width" [formGroup]="registerForm" (ngSubmit)="Submit(registerForm.value, registerForm.valid)" novalidate > 
+          <div class="row home_register_row">  
+              <mz-select-container class="col s12 m6 l6 xl6">
+                  <select mz-select mz-validation required
+                    id="r-select-createdby"
+                    [label]="'Profile Created By'"
+                    [placeholder]="'Created By'" formControlName="createdby"  [errorMessageResource]="errorMessageResources.general">
+                    
+                      <option *ngFor="let created of masterDataList.createdby" [ngValue]="created">{{created.viewValue}}</option>
+                     
+                   
+                  </select>
+                </mz-select-container>
+          <mz-input-container class="col s12 m6 l6 xl6">
+            <input mz-input mz-validation required
+              id="r-input-fullname"
+              formControlName="fullname"
+              type="text"
+              [errorMessageResource]="errorMessageResources.general"
+              [label]="'Full Name'" />
+          </mz-input-container>
+          <mz-select-container class="col s12 m6 l4 xl4">
+              <select mz-select mz-validation required
+                id="r-select-maritial"
+                [label]="'Marital Status'"
+                [placeholder]="'Marital Status'" formControlName="maritialstatus"  [errorMessageResource]="errorMessageResources.general">
+                
+                  <option *ngFor="let mstatus of masterDataList.maritialstatus" [ngValue]="mstatus">{{mstatus.viewValue}}</option>
+
+               
+              </select>
+            </mz-select-container>
+            <mz-select-container class="col s12 m6 l4 xl4">
+                <select mz-select mz-validation required
+                  id="r-select-gender"
+                  [label]="'Gender'"
+                  [placeholder]="'Gender'" formControlName="gender" [errorMessageResource]="errorMessageResources.general">                 
+                  <option *ngFor="let gender of masterDataList.gender" [ngValue]="gender">{{gender.viewValue}}</option>
+                   
+                 
+                </select>
+              </mz-select-container>              
+              <div class="col s12 m6 l4 xl4 home-register-datepicker">
+                  <md2-datepicker [max]="maxDate" #birthday formControlName="dob"></md2-datepicker>                  
+              </div>  
+              <mz-select-container class="col s12 m6 l4 xl4 r-country-clear">
+                  <select mz-select mz-validation required
+                    id="r-select-country"
+                    [label]="'Country'"
+                    [placeholder]="'Country'" formControlName="country" [errorMessageResource]="errorMessageResources.general">
+                   
+                      <option>Option 1</option>
+                      <option>Option 2</option>                 
+                   
+                      <option>Option 3</option>
+                   
+                  </select>
+                </mz-select-container>
+
+                <mz-select-container class="col s12 m6 l4 xl4">
+                    <select mz-select mz-validation required
+                      id="r-select-state"
+                      [label]="'State'"
+                      [placeholder]="'State'" formControlName="state"  [errorMessageResource]="errorMessageResources.general">
+                     
+                        <option>Option 1</option>
+                        <option>Option 2</option>                 
+                     
+                        <option>Option 3</option>
+                     
+                    </select>
+                  </mz-select-container>
+
+                  <mz-select-container class="col s12 m6 l4 xl4">
+                      <select mz-select mz-validation required
+                        id="r-select-city"
+                        [label]="'City'"
+                        [placeholder]="'City'"  formControlName="city" [errorMessageResource]="errorMessageResources.general" >
+                       
+                          <option>Option 1</option>
+                          <option>Option 2</option>                 
+                       
+                          <option>Option 3</option>
+                       
+                      </select>
+                    </mz-select-container>
+                    
+                      <mz-select-container class="col s12 m6 l4 xl4">
+                          <select mz-select mz-validation required
+                            id="r-select-religion"
+                            [label]="'Religion'"
+                            [placeholder]="'Religion'"   formControlName="religion"  [errorMessageResource]="errorMessageResources.general">
+                           
+                              <option>Option 1</option>
+                              <option>Option 2</option>                 
+                           
+                              <option>Option 3</option>
+                           
+                          </select>
+                        </mz-select-container>
+      
+                        <mz-select-container class="col s12 m6 l4 xl4">
+                            <select mz-select mz-validation required
+                              id="r-select-tongue"
+                              [label]="'Mother Tongue'"
+                              [placeholder]="'Mother Tongue'"  formControlName="mothertongue"  [errorMessageResource]="errorMessageResources.general">
+                             
+                                <option>Option 1</option>
+                                <option>Option 2</option>                 
+                             
+                                <option>Option 3</option>
+                             
+                            </select>
+                          </mz-select-container>
+                          <mz-select-container class="col s12 m6 l4 xl4">
+                              <select mz-select mz-validation required
+                                id="r-select-caste"
+                                [label]="'Caste'"
+                                [placeholder]="'Caste'" formControlName="caste"  [errorMessageResource]="errorMessageResources.general">
+                               
+                                  <option>Option 1</option>
+                                  <option>Option 2</option>                 
+                               
+                                  <option>Option 3</option>
+                               
+                              </select>
+                            </mz-select-container>
+            
+                            <mz-input-container class="col s12 m6 l6 xl6">
+                                <input mz-input mz-validation required
+                                  id="r-input-email"                                 
+                                  type="email"
+                                  [errorMessageResource]="errorMessageResources.firstName"
+                                  [label]="'Email Id'" formControlName='email'/>
+                              </mz-input-container>    
+                              <mz-input-container class="col s12 m6 l6 xl6">
+                                  <input mz-input mz-validation required
+                                    id="r-input-mobile"                                 
+                                    type="text"
+                                    [errorMessageResource]="errorMessageResources.firstName"
+                                    [label]="'Mobile Number'" formControlName='mobile'/> 
+                                </mz-input-container>                  
+          <mz-input-container class="col s12 m6 l6 xl6">
+            <input mz-input mz-validation required
+              id="r-input-password"
+              formControlName="password"
+              type="password"
+              [errorMessageResource]="errorMessageResources.general"
+              [label]="'Password'" />
+          </mz-input-container>
+
+
+          <div class="home-register-submit-btn flex-center">
+                <button [disabled]="!registerForm.valid"  class="" md-raised-button color="warn">Submit</button>
+          </div>      
+              </div> 
+        
+        </form> 
+    </div>
+    </div>
+   </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2>About this page</h2>
+        <p class="lead">This is a great place to talk about your webpage. This template is purposefully unstyled so you can use it as a boilerplate or starting point for you own landing page designs! This template features:</p>
+        <ul>
+          <li>Clickable nav links that smooth scroll to page sections</li>
+          <li>Responsive behavior when clicking nav links perfect for a one page website</li>
+          <li>Bootstrap's scrollspy feature which highlights which section of the page you're on in the navbar</li>
+          <li>Minimal custom CSS so you are free to explore your own unique design options</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2>Services we offer</h2>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2>Contact us</h2>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+  <div class="container">
+    <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+  </div>
+  <!-- /.container -->
+</footer>
+
