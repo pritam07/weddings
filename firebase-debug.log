@@ -1,0 +1,84 @@
+[debug] [2018-05-16T01:03:59.787Z] ----------------------------------------------------------------------
+[debug] [2018-05-16T01:03:59.789Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\DELL\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-05-16T01:03:59.789Z] CLI Version:   3.18.4
+[debug] [2018-05-16T01:03:59.789Z] Platform:      win32
+[debug] [2018-05-16T01:03:59.789Z] Node Version:  v9.0.0
+[debug] [2018-05-16T01:03:59.789Z] Time:          Wed May 16 2018 06:33:59 GMT+0530 (India Standard Time)
+[debug] [2018-05-16T01:03:59.789Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-16T01:03:59.799Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-16T01:03:59.800Z] > authorizing via signed-in user
+[debug] [2018-05-16T01:03:59.801Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/fir-2e594  
+  
+ Wed May 16 2018 06:33:59 GMT+0530 (India Standard Time)
+[debug] [2018-05-16T01:04:01.971Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-16T01:04:01.972Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/fir-2e594/tokens  
+  
+ Wed May 16 2018 06:34:01 GMT+0530 (India Standard Time)
+[debug] [2018-05-16T01:04:03.207Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-16T01:04:03.208Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/fir-2e594  
+  
+ Wed May 16 2018 06:34:03 GMT+0530 (India Standard Time)
+[debug] [2018-05-16T01:04:04.681Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\All-Projects\my-projects\matrimony\project4\mat2\wedding2\weddings'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-05-16T01:04:06.452Z] Fetching environment
+[debug] [2018-05-16T01:04:06.454Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/485874526890:getServerAppConfig  
+  
+ Wed May 16 2018 06:34:06 GMT+0530 (India Standard Time)
+[debug] [2018-05-16T01:04:06.455Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/485874526890/clients/_:getWebAppConfig  
+  
+ Wed May 16 2018 06:34:06 GMT+0530 (India Standard Time)
+[debug] [2018-05-16T01:04:08.068Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-16T01:04:08.068Z] Starting @google-cloud/functions-emulator
+[debug] [2018-05-16T01:04:08.508Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: dist
+[info] +  hosting: Local server: http://localhost:5000
+
+[debug] [2018-05-16T01:04:11.249Z] Parsing function triggers
+[info] [hosting] Rewriting /favicon.ico to local function ssrapp
+[info] +  functions: ssrapp: http://localhost:5001/fir-2e594/us-central1/ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /favicon.ico to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw.json?ngsw-cache-bust=0.9678258790831988 to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp
+[info] [hosting] Rewriting /ngsw-worker.js to local function ssrapp

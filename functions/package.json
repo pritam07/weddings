@@ -1,0 +1,41 @@
+{
+  "name": "functions",
+  "scripts": {
+    "lint": "tslint --project tsconfig.json",
+    "build": "tsc",
+    "serve": "npm run build && firebase serve --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@angular/animations": "^6.0.0",
+    "@angular/common": "^6.0.0",
+    "@angular/compiler": "^6.0.0",
+    "@angular/core": "^6.0.0",
+    "@angular/forms": "^6.0.0",
+    "@angular/http": "^6.0.0",
+    "@angular/platform-browser": "^6.0.0",
+    "@angular/platform-browser-dynamic": "^6.0.0",
+    "@angular/platform-server": "^6.0.2",
+    "@angular/pwa": "^0.6.0",
+    "@angular/router": "^6.0.0",
+    "@angular/service-worker": "^6.0.0",
+    "@nguniversal/module-map-ngfactory-loader": "^6.0.0",
+    "angular-universal-express-firebase": "0.0.4",
+    "core-js": "^2.5.4",
+    "firebase-admin": "~5.12.0",
+    "firebase-functions": "^1.0.1",
+    "rxjs": "^6.0.0",
+    "ts-loader": "^4.3.0",
+    "zone.js": "^0.8.26"
+  },
+  "devDependencies": {
+    "@angular-devkit/schematics": "0.0.34",
+    "tslint": "^5.8.0",
+    "typescript": "^2.5.3"
+  },
+  "private": true
+}
